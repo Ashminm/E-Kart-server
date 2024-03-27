@@ -17,7 +17,7 @@ const wishListSchema=new mongoose.Schema({
         type:String,
         required:true
     },
-    catagory:{
+    category:{
         type:String,
         required:true
     },
@@ -35,6 +35,10 @@ const wishListSchema=new mongoose.Schema({
             required:true
         }
 
+    },
+    userId:{
+        type:String,
+        required:true
     }
     
 })
