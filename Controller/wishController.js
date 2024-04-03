@@ -30,3 +30,14 @@ exports.getWishList= async(req,res)=>{
         res.status(401).json(err)
     }
 }
+
+exports.removeFromWishListItem=async(req,res)=>{
+    try{
+        const wishId= req.params.id
+        const wishListdelete=await wishlists.findOneAndDelete({_id:wishId})
+        res.status(200).json(wishListdelete)
+
+    }catch(err){
+        res.status(401).json(err)
+    }
+}
