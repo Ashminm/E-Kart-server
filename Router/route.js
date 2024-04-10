@@ -18,6 +18,8 @@ router.delete('/delete-wishItem/:id',jwtMiddleware,wishListController.removeFrom
 router.post('/add-toCart',jwtMiddleware,cartController.addToCart)
 router.get('/view-cartList',jwtMiddleware,cartController.viewCartList)
 router.delete('/delete-cart-Item/:id',jwtMiddleware,cartController.deleteCartItem)
-
+router.get('/incQuantity-cart-Item/:id',jwtMiddleware,cartController.incQuantity)
+router.get('/decQuantity-cart-Item/:id',jwtMiddleware,cartController.decQuantity)
+router.delete('/empty-cart',jwtMiddleware,cartController.emptyCart)
 
 module.exports=router
