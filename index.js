@@ -1,12 +1,13 @@
 require('dotenv').config()
 const express=require('express')
 const cors=require('cors')
-require('./Connection/db')
-const router=require('./Router/route')
+
 
 const Ekart=express()
 Ekart.use(cors())
 Ekart.use(express.json())
+const router=require('./Router/route')
+require('./Connection/db')
 Ekart.use(router)
 
 const PORT=3000 || process.env.PORT
